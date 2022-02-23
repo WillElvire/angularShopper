@@ -1,0 +1,38 @@
+{
+  "products": [{
+
+    "id": "1",
+    "name": "美国进口红酒",
+    "price": "100",
+    "img": "../../images/1.jpg",
+    "num": "1",
+    "checked": "true",
+    "description":"good product"
+
+  }, {
+
+    "id": "3",
+    "name": "美国进口红酒",
+    "price": "200",
+    "img": "../../images/1.jpg",
+    "num": "4",
+    "checked": "false",
+    "description":"truly product"
+
+  },
+
+  {
+
+    "id": "6",
+    "name": "国进口红酒",
+    "price": "700",
+    "img": "../../images/1.jpg",
+    "num": "4",
+    "checked": "false",
+    "description":"truly product"
+
+  }
+
+
+]
+}

@@ -1,0 +1,20 @@
+<h3 style="margin-left: 7%; margin-top: 2%">
+  Mes produits
+  <span [matBadge]="products?.length" matBadgeOverlap="false"></span>
+</h3>
+<p *ngFor="let product of products">
+  <mat-card>
+    <mat-card-content>
+      <p>Product Name : <b>{{ product?.name }}</b></p>
+      <p>Product Description : <b>{{ product?.description }}</b></p>
+      <p>Product Price : <b>{{ product?.price }}</b></p>
+    </mat-card-content>
+  </mat-card>
+</p>
+<p *ngIf="products?.length==0" style="color: red">votre panier est vide</p>
+<mat-divider style="margin-top: 4%"> </mat-divider>
+
+<button mat-button (click)="removeAllProducts()" *ngIf="products?.length>0">
+  <mat-icon>delete</mat-icon>
+</button>
+

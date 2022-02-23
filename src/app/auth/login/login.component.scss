@@ -1,0 +1,44 @@
+mat-card {
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 5%;
+  height: 70vh;
+  border:1px solid rgb(71, 8, 8);
+
+  mat-form-field {
+    margin-left: 10%;
+    width: 80%;
+  }
+  button {
+    width: 90%;
+    margin-left: 7%;
+  }
+  mat-divider {
+    margin-top: 2%;
+  }
+  .otherOption {
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+  h3 {
+    font-weight: bold;
+    margin-left: 50%;
+    font-style: italic;
+  }
+}
+
+button .mat-raised-button {
+  width: 100%;
+  background-color:rgb(71, 8, 8);
+  &:hover {
+    background: black;
+    color:white;
+    transition: background 0.5s;
+
+
+  }
+}
+
+body {
+  background-color: red;
+}

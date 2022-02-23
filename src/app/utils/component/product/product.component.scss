@@ -1,0 +1,33 @@
+mat-card {
+  width: 40%;
+  border: 1px solid rgb(99, 3, 3);
+  transition: bakcground 0.5s;
+  &:hover {
+    border: 1px solid black;
+    background-color: rgb(105, 3, 3);
+    mat-card-title {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+    b {
+      color: rgb(255, 246, 246) !important;
+    }
+  }
+}
+
+.example-card {
+  button {
+    margin-top: 5%;
+    margin-left: 1%;
+  }
+}
+.products {
+  margin-top: 2%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+}

@@ -1,0 +1,34 @@
+<h1 style="margin-left: 20%; margin-top: 2%">
+  Products <span [matBadge]="products?.length" matBadgeOverlap="false"></span>
+</h1>
+<div class="products">
+  <div class="example-card" *ngFor="let item of products">
+    <mat-card>
+      <mat-card-header>
+        <div class="example-header-image">
+          <img mat-card-avatar src="/favicon.ico" alt="Photo of a Shiba Inu" />
+        </div>
+        <mat-card-title>{{ item?.name }}</mat-card-title>
+        <mat-card-subtitle>{{ item?.id }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <b style="color: red">{{ item?.description }}</b>
+
+          laborum natus doloremque modi temporibus odit esse!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi assumenda sit quibusdam, eaque consequatur, aliqui.
+          lo
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <button
+      mat-raised-button
+      (click)="addItemToCart(item)"
+      [disabled]="item.checked === 'true'"
+    >
+      Ajouter au Panier <mat-icon *ngIf="item.checked === 'false'">add</mat-icon
+      ><mat-icon *ngIf="item.checked === 'true'">lock</mat-icon>
+    </button>
+  </div>
+</div>

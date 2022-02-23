@@ -1,0 +1,59 @@
+<div class="container">
+  <app-back></app-back>
+  <mat-card>
+    <mat-card-content>
+      <h3 [style]="{ 'margin-top': error || isConnected ? '7%' : '0%' }">
+        Authentification <mat-icon matSuffix>home</mat-icon>
+      </h3>
+      <form method="post" [formGroup]="loginForm">
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="email" />
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="standard">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              [type]="hide ? 'password' : 'text'"
+              formControlName="password"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </p>
+        <button
+          *ngIf="!isLoaded"
+          mat-raised-button
+          color="primary"
+          style="background: rgb(71, 8, 8); color: white"
+          (click)="Login()"
+        >
+          Login <mat-icon>login</mat-icon>
+        </button>
+        <mat-spinner
+          *ngIf="isLoaded"
+          style="font-size: 18px; margin-left: 38%"
+        ></mat-spinner>
+
+        <mat-divider color="accent"></mat-divider>
+        <p class="otherOption">
+          Vous n'avez pas de compte ?
+          <a [routerLink]="'/register'">S'inscrire</a>
+        </p>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

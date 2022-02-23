@@ -1,0 +1,47 @@
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="menu-container">
+        <section class="menu">
+          <div class="menu-logo">
+            <a href="#">
+              <img src="../favicon.ico" alt="logo" />
+            </a>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="menu-item">
+            <ul>
+              <li>
+                <a class="menu-item-link">Accueil</a>
+              </li>
+              <li>
+                <a class="menu-item-link">Accueil</a>
+              </li>
+              <li>
+                <a class="menu-item-link">A propos</a>
+              </li>
+              <li>
+                <a class="menu-item-link">FAQ</a>
+              </li>
+
+              <li>
+                <button mat-raised-button routerLink="/login">Connexion</button>
+              </li>
+              <li>
+                <button mat-raised-button>Inscription</button>
+              </li>
+              <li>
+                <button mat-button style="color:white" [matMenuTriggerFor]="menu"><mat-icon>shopping_cart</mat-icon> <span [matBadge]="products?.length"matBadgeOverlap="false"></span></button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <app-product></app-product>
+    </div>
+  </div>
+</body>
+
+<mat-menu #menu="matMenu" >
+  <app-shoppingCart [products]="products"></app-shoppingCart>
+</mat-menu>
